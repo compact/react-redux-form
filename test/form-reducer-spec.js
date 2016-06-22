@@ -69,6 +69,14 @@ describe('formReducer()', () => {
           two: {
             three: 'four',
           },
+          collection: [
+            {
+              five: 'six',
+            },
+            {
+              five: 'seven',
+            },
+          ],
         },
       });
 
@@ -83,6 +91,12 @@ describe('formReducer()', () => {
         },
         'deep.two.three': {
           initialValue: 'four',
+        },
+        'deep.collection.0.five': {
+          initialValue: 'six',
+        },
+        'deep.collection.1.five': {
+          initialValue: 'seven',
         },
       });
     });
